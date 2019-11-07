@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>DOM event example</h2>
+    <p>What will happen when you interact with this site?</p>
+    <p>
+      <button id="btn" onclick="click_btn();">Click me!</button>
+      <p id="btn-target"></p>
+    </p>
+
+
+    <p>
+      Now something event listener: <span style="color: #ffffff; background-color: #878774;">Some text here...</span>
+    </p>
+
+    <script type="text/javascript">
+        function click_btn() {
+          let p = document.getElementById("btn-target");
+          p.textContent = "You clicked a button, awesome"
+        }
+
+        // add event listener to span elements
+        let span = document.querySelector('span')
+        span.addEventListener('mouseover', function() { this.style.backgroundColor = "#ff0000"; });
+        span.addEventListener('mouseout', function() { this.style.backgroundColor = "#00ff00"; });
+    </script>
+  </body>
+</html>

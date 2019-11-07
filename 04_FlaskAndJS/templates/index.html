@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to Ajax + Flask demo</h1>
+    <button id="btn">load table</button>
+    <button onclick="$('#target').html('');">Clear table</button>
+    <div id="target"></div>
+  </body>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("button#btn").on('click', function() {
+
+        $.get("table", function(data) {
+
+            let tableHTML = "<table>";
+
+              if(data.length > 0) {
+                for(const [key, value] of Object.entries(data[0])) {
+                  tableHTML += "<th>" + key + "</th>"
+                }
+              }
+
+            data.forEach(function(row) {
+              tableHTML += "<tr>"
+                for(const [key, value] of Object.entries(row)) {
+                  tableHTML += "<td>" + value + "</td>"
+                }
+                tableHTML += "</tr>"
+              tableHTML
+            });
+            tableHTML += "</table>";
+
+            $("div#target").html(tableHTML);
+
+        });
+      });
+    });
+  </script>
+</html>

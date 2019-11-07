@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function sum(a, b) {
+        return a + b;
+      }
+
+      // function expression, assign to diff identifier
+      let diff = function(a, b) { return a - b; }
+
+      // you can either use an expression or a sequence of statements in { ... }
+      let pow = (a, b) => a ** b
+
+      let x = 10
+      const y = 42
+
+      document.write(sum(x, sum(y, 1) + diff(y, x) * pow(2, 3)))
+
+    </script>
+  </body>
+</html>

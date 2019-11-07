@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        let paragraph = document.createElement("p");
+
+        let content = document.createTextNode("This is some text the paragraph contains....");
+        paragraph.appendChild(content);
+
+        // append paragraph tag after body tag
+        document.body.appendChild(paragraph);
+    </script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-# JSExamples
+# JavascriptIntro

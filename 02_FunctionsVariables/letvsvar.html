@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Let vs. Var</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      {
+          let message = "hello world";
+      }
+      document.write(message); // Uncaught ReferenceError: message is not defined
+
+      {
+         var message = "hello world";
+      }
+      document.write(message) // works
+
+    </script>
+  </body>
+</html>
